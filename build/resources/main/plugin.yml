@@ -1,0 +1,29 @@
+name: BonesGuard
+main: ru.eatherbone.panel.BonesGuard
+version: 1.2.0-Release
+api-version: '1.21'
+author: EatherBone
+description: Фильтр чата для Minecraft
+commands:
+  bonesguard:
+    description: Команда для управления плагином
+    usage: /bonesguard <reload|help>
+    permission: bonesguard.reload
+  bmute:
+    description: Замутить игрока
+    usage: /bmute <игрок> <время> [причина]
+    permission: bonesguard.mute
+  bunmute:
+    description: Размутить игрока
+    usage: /bunmute <игрок>
+    permission: bonesguard.mute
+permissions:
+  bonesguard.mute:
+    description: Позволяет использовать команды мута
+    default: op
+  bonesguard.reload:
+    description: Позволяет перезагружать конфигурации
+    default: op
+  bonesguard.nofilter:
+    description: Отключает все проверки чата (фильтр, капс, флуд) для игрока
+    default: op
